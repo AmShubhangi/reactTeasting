@@ -9,9 +9,13 @@ import CommentList from 'components/CommentList';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('shows a comment box', () => {
-    const wrapped = shallow(<App />);
+let wrapped;
 
+beforeEach(() => {
+    wrapped = shallow(<App />)
+});
+
+it('shows a comment box', () => {
     expect(wrapped.find(CommentBox).length).toEqual(1);
     // Tetsing
     // const div = document.createElement('div');
@@ -26,8 +30,6 @@ it('shows a comment box', () => {
 
 
 it('shows a comment List', () => {
-    const wrapped = shallow(<App />);
-
     expect(wrapped.find(CommentList).length).toEqual(1);
     // Tetsing
     // const div = document.createElement('div');
