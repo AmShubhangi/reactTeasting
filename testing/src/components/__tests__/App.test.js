@@ -2,10 +2,10 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import App from '../App';
-import CommentBox from '../CommentBox';
+import CommentBox from 'components/CommentBox';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import CommentList from '../CommentList';
+import CommentList from 'components/CommentList';
 
 Enzyme.configure({ adapter: new Adapter() });
 
