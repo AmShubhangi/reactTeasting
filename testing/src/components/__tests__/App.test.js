@@ -15,21 +15,12 @@ beforeEach(() => {
 });
 
 it('shows a comment box', () => {
-    expect(wrapped.find(CommentBox).length).toEqual(1);
-    // Tetsing
-    // const div = document.createElement('div');
-
-    // ReactDOM.render(<App />, div);
-    // // You will get this text in terminal
-    // console.log(div.innerHTML);
-    // expect(div.innerHTML).toContain('Comment Box');
-
-    // ReactDOM.unmountComponentAtNode(div);
+    expect(wrapped.find(CommentBox))
 });
 
 
 it('shows a comment List', () => {
-    expect(wrapped.find(CommentList).length).toEqual(1);
+    expect(wrapped.find(CommentList))
     // Tetsing
     // const div = document.createElement('div');
 
