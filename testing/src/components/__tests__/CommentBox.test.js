@@ -6,6 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from '../../reducers';
+import Root from '../../Root';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -13,7 +14,7 @@ let wrapped;
 
 beforeEach(() => {
     wrapped = mount(
-        <Provider store={createStore(reducers, {}, applyMiddleware(ajhdajksdjkashdkj))}><CommentBox /></Provider>
+        <Root><CommentBox /></Root>
     );
 });
 
