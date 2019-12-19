@@ -1,7 +1,6 @@
 import { SAVE_COMMENT } from './types';
-import comment from '../reducers/comment';
 
-export function saveComment() {
+export function saveComment(comment) {
     return {
         type: SAVE_COMMENT,
         payload: comment
