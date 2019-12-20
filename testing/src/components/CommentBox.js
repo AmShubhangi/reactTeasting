@@ -48,7 +48,7 @@ class CommentBox extends Component {
                         </button>
                         <button onClick={(event) => {
                             event.preventDefault();
-                            return this.props.fetchComments
+                            return this.props.fetchComments()
                         }} className="ui vertical animated button">
                             <div className="hidden content">Fetch</div>
                             <div className="visible content">Click</div>
