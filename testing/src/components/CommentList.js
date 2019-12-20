@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class CommentList extends Component {
 
     renderComments() {
-        console.log(this.props);
+        console.log("this.props", this.props);
         return this.props.comments.map(comment => {
             return <li style={{
                 wordWrap: 'break-word', lineHeight: 1.7, marginBottom: 20
@@ -29,7 +29,7 @@ class CommentList extends Component {
                 }}>My Written Diary</span> : ''
                 }
                 <ul style={{ listStyle: 'decimal' }}>{this.renderComments()}</ul>
-            </div >
+            </div>
         )
     }
 }

@@ -20,13 +20,10 @@ class CommentBox extends Component {
         this.setState({ comment: '' })
     };
 
-    handleFetch = (event) => {
-        event.preventDefault();
-    };
-
     handleClear = (event) => {
         event.preventDefault();
-        this.setState({ comment: '' })
+        this.setState({ comment: '' });
+        this.setState({ error: '' });
     };
 
     render() {
@@ -49,7 +46,10 @@ class CommentBox extends Component {
                             <div className="hidden content">Clear</div>
                             <div className="visible content">Click</div>
                         </button>
-                        <button onClick={this.handleFetch} className="ui vertical animated button">
+                        <button onClick={(event) => {
+                            event.preventDefault();
+                            return this.props.fetchComments
+                        }} className="ui vertical animated button">
                             <div className="hidden content">Fetch</div>
                             <div className="visible content">Click</div>
                         </button>
