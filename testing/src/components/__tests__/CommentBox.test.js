@@ -3,9 +3,6 @@ import Enzyme from 'enzyme';
 import CommentBox from '../CommentBox';
 import { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
-import reducers from '../../reducers';
 import Root from '../../Root';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -22,11 +19,11 @@ afterEach(() => {
     wrapped.unmount();
 });
 
-it('has a text area and button', () => {
+it('has a text area and 3 button', () => {
     console.log(wrapped.find('textarea'));
     console.log(wrapped.find('button'));
-    expect(wrapped.find('textarea').length)
-    expect(wrapped.find('button').length)
+    expect(wrapped.find('textarea').length).toEqual(1)
+    expect(wrapped.find('button').length).toEqual(3)
 })
 
 describe('Shubhangi is writing testcases for textArea & Button', () => {
