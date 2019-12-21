@@ -14,11 +14,11 @@ class App extends Component {
     renderButton() {
         if (this.props.auth) {
             return (
-                <button onClick={() => this.props.changeAuth(false)} class="glow-on-hover" type="button">Sign Out</button>
+                <button onClick={() => this.props.changeAuth(false)} className="glow-on-hover" type="button">Sign Out</button>
             )
         } else {
             return (
-                <button onClick={() => this.props.changeAuth(true)} class="glow-on-hover" type="button">Sign In</button>
+                <button onClick={() => this.props.changeAuth(true)} className="glow-on-hover" type="button">Sign In</button>
             )
         }
     }
