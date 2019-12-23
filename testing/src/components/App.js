@@ -25,7 +25,7 @@ class App extends Component {
 
     renderHeader() {
         return (
-            <div style={{ marginTop: -14, background: 'repeating-linear-gradient(45deg, #c1dc9c, transparent 100px)' }}>
+            <div style={{ marginTop: -14 }} className="animating">
                 <ul style={{
                     display: 'flex',
                     listStyle: 'none'

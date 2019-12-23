@@ -1,3 +1,10 @@
+body {
+  background-image: url(../assets/bodyyyyyyyyy.jpg);
+  animation: slide 10s linear infinite;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
 .glow-on-hover {
   width: 80px;
   height: 30px;
@@ -64,8 +71,21 @@
   }
 }
 
-
 button {
   font-size: 12px !important;
   font-weight: 600 !important;
+}
+
+@keyframes slide {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -400px 0px;
+  }
+}
+
+.animating {
+  background: repeating-linear-gradient(45deg, #4a8e42, transparent 100px);
+  animation: slide 2s linear infinite;
 }
